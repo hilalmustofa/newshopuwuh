@@ -84,7 +84,7 @@ router.get("/", (req, res, next) => {
             name: result.name,
             description: result.description,
             price: result.price,
-            picture: "https://shopuwuh.herokuapp.com/" + result.picture,
+            picture: process.env.baseurl + "/" + result.picture,
           };
         }),
       };
@@ -142,7 +142,7 @@ router.post("/",apiLimiter,
             name: result.name,
             description: result.description,
             price: result.price,
-            picture: "https://shopuwuh.herokuapp.com/" + result.picture,
+            picture: process.env.baseurl + "/" + result.picture,
           },
         });
       })
@@ -165,7 +165,7 @@ router.get("/:id", (req, res, next) => {
             name: result.name,
             description: result.description,
             price: result.price,
-            picture: "https://shopuwuh.herokuapp.com/" + result.picture,
+            picture: process.env.baseurl + "/" + result.picture,
           },
         });
       } else {
